@@ -1,0 +1,171 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="cheat-sheet.css" />
+</head><body>
+
+
+
+
+
+<div>
+
+<h1>
+	Ruby to JavaScript Comparison Cheat Sheet
+</h1>
+  <table>
+    <tr>
+      <th>Ruby</th>
+      <th>JavaScript</th>
+    </tr>
+
+    <tr>
+      <td class="subhead" colspan="2">Variables</td>
+    </tr>
+
+    <tr>
+      <td>instrument <span class="keyword">=</span> <span class="string">&quot;guitar&quot;</span></td>
+      <td><span class="blueital">var</span> instrument <span class="keyword">=</span> <span class="string">&quot;guitar&quot;</span>;</td>
+    </tr>
+
+    <tr>
+      <td class="subhead" colspan="2">Operators</td>
+    </tr>
+
+    <tr>
+      <td><span class="numbers">5</span> <span class="keyword">/</span> <span class="numbers">2</span> <span class="comment">#=&gt; 2</span></td>
+      <td><span class="numbers">5</span> / <span class="numbers">2</span> <span class="comment">//=&gt; 2.5</span></td>
+    </tr>
+    <tr>
+      <td><span class="numbers">5</span> <span class="keyword">/</span> <span class="numbers">2</span> <span class="comment">#=&gt; 2</span></td>
+      <td><span class="blueital">Math</span>.<span class="blue">floor</span>(<span class="numbers">5</span> / <span class="numbers">2</span>) <span class="comment">//=&gt; 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="numbers">5</span>.to_f <span class="keyword">/</span> <span class="numbers">2</span> <span class="comment">#=&gt; 2.5</span></td>
+      <td><span class="numbers">5</span> / <span class="numbers">2</span> <span class="comment">//=&gt; 2.5</span></td>
+    </tr>
+    <tr>
+      <td>
+        <span>puts</span> <span class="string">&quot;I love music!&quot;</span>
+        <span class="comment">#=&gt;  I love music!</span>
+      </td>
+      <td>
+        console<span class="blue">.log</span>(<span class="string">&quot;I love music!&quot;</span>)
+        <span class="comment">//=&gt;  I love music!</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="subhead" colspan="2">Flow Control and Iteration</td>
+    </tr>
+
+    <tr>
+      <td>
+        array <span class="keyword">=</span> [<span class="numbers">1</span>, <span class="numbers">2</span>, <span class="numbers">3</span>, <span class="numbers">4</span>, <span class="numbers">5</span>]<br><br>
+
+        array.each {|a| a <span class="keyword">+</span> <span class="numbers">1</span>} 
+        <span class="comment">#=&gt; [2, 3, 4, 5, 6]</span>
+      </td>
+
+      <td>
+	    <span class="">var</span> array <span class="">=</span> [<span class="numbers">1</span>, <span class="numbers">2</span>, <span class="numbers">3</span>, <span class="numbers">4</span>, <span class="numbers">5</span>];<br><br>
+
+        <span class="keyword">for</span> (<span class="blueital">var</span> i <span class="keyword">=</span> <span class="">0</span>; i <span class="keyword">&lt;</span> array.<span class="blue">length</span>; i<span class="keyword">++</span>)</span>{<br>
+          &nbsp;&nbsp;array[i] <span class="keyword">+=</span> <span class="numbers">1</span>;<br>
+        } 
+        <span class="comment">//=&gt; [2, 3, 4, 5, 6]</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="keyword">if</span> conditional<br>
+          &nbsp;&nbsp;block1<br>
+        <span class="keyword">else</span><br>
+          &nbsp;&nbsp;block 2<br>
+        <span class="keyword">end</span> 
+      </td>
+
+      <td>
+        <span class="keyword">if</span>(conditional) {<br>
+          &nbsp;&nbsp;block1<br>
+        } <span class="keyword">else</span> {<br>
+          &nbsp;&nbsp;block 2<br>
+        }; 
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="keyword">case</span> conditional<br>
+        <span class="keyword">when</span> value1<br>
+          &nbsp;&nbsp;block1<br>
+        <span class="keyword">when</span> value2<br>
+          &nbsp;&nbsp;block2<br>
+        <span class="keyword">else</span><br>
+          &nbsp;&nbsp;block3<br>
+        <span class="keyword">end</span>
+      </td>
+
+      <td>
+        <span class="keyword">switch</span>(conditional){<br>
+        <span class="keyword">case</span> value1:<br>
+          &nbsp;&nbsp;block1<br>
+        <span class="keyword">  break</span>;<br>
+        <span class="keyword">case</span> value2:<br>
+          &nbsp;&nbsp;block2<br>
+        <span class="keyword">  break</span>;<br>
+        <span class="keyword">default</span>:<br>
+          &nbsp;&nbsp;block3<br>
+        };
+      </td>
+    </tr>
+    <tr>
+      <td class="subhead" colspan="2">Creating New Methods and Collections</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="keyword">def</span> <span class="function">method_name</span>(<span class="args">arguments</span>)<br>
+          &nbsp;&nbsp;block<br>
+        <span class="keyword">end</span>
+      </td>
+
+      <td>
+        <span class="blueital">function</span> <span class="function">methodName</span>(<span class="args">arguments</span>){<br>
+          &nbsp;&nbsp;block;<br>
+        };
+      </td>
+    </tr>
+
+    <tr>
+      <td>hash <span class="keyword">=</span> {key1 =&gt; value1, key2 =&gt; value2}</td>
+      <td>object <span class="keyword">=</span> {property1: value1, property2: value2};</td>
+    </tr>
+    <tr>
+      <td>new_hash <span class="keyword">=</span> <span class="blueital">Hash</span>.<span class="keyword">new</span>()</span></td>
+      <td>newObject <span class="keyword">=</span> <span class="keyword">new</span> Object();</td>
+    </tr>
+
+    <tr>
+      <td class="subhead" colspan="2">Generating Random Numbers</td>
+    </tr>
+
+    <tr>
+      <td>
+      	min <span class="keyword">+</span> <span class="blueital">Random</span>.<span class="keyword">new</span>.rand(max <span class="keyword">-</span> min <span class="keyword">+</span> <span class="numbers">1</span>) <span class="comment">#returns a random number between min and max</span><br><br>
+
+      	<span class="numbers">3</span> <span class="keyword">+</span> <span class="blueital">Random</span>.<span class="keyword">new</span>.rand(<span class="numbers">7</span> <span class="keyword">-</span> <span class="numbers">3</span> <span class="keyword">+</span> <span class="numbers">1</span>)<span class="comment"> #returns a random number between 3 and 7</span><br><br>
+
+		<span class="numbers">3</span> <span class="keyword">+</span> <span class="blueital">Random</span>.<span class="keyword">new</span>.rand(<span class="numbers">5</span>)<span class="comment"> #returns a random number between 3 and 7</span>
+
+      </td>
+      <td>
+      <span class="blueital">Math</span>.<span class="blue">random</span>()<span class="keyword">*</span>(max<span class="keyword"> - </span>min) <span class="keyword">+</span> min; <span class="comment">//returns a random number between min and max</span><br><br>
+
+      <span class="blueital">Math</span>.<span class="blue">random</span>()<span class="keyword">*</span>(<span class="numbers">7</span> <span class="keyword">-</span> <span class="numbers">3</span>) <span class="keyword">+</span> <span class="numbers">3</span>; <span class="comment">//returns a random number between 3 and 7</span><br><br>
+
+      <span class="blueital">Math</span>.<span class="blue">random</span>()<span class="keyword">*</span>(<span class="numbers">4</span>) <span class="keyword">+</span> <span class="numbers">3</span>; <span class="comment">//returns a random number between 3 and 7</span></td>
+    </tr>
+
+  </table>
+
+</div></body></html>
